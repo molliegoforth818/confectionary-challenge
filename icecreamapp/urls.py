@@ -1,10 +1,12 @@
 from django.urls import path
 from django.conf.urls import include
 from icecreamapp import views
-from .views import flavor_list
+from .views import *
 
 app_name = "icecreamapp"
 
 urlpatterns = [
-    path('', flavor_list, name='flavor_list'),
+    path('', variety_list, name='variety_list'),
+    path('variety/form/', variety_form, name='variety_form'),
+
 ]

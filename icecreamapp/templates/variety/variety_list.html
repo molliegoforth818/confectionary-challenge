@@ -1,0 +1,18 @@
+{% extends 'shared/base.html' %}
+
+{% block content %}
+<h1>Welcome to the Confectionery</h1>
+
+<h1>Ice Cream Varieties</h1>
+<div>
+{% for variety in varieties %}
+    
+ <h2> {{ variety.name }} </h2>
+   
+{% endfor %}
+</div>
+<div>
+ <form action="{% url 'icecreamapp:variety_form' %}"> 
+<button>Add Variety</button></form>
+</div>
+{% endblock content %}
