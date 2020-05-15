@@ -1,0 +1,1 @@
+from .flavors.flavor_list import flavor_list
