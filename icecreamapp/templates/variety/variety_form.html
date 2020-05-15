@@ -1,0 +1,21 @@
+{% extends 'shared/base.html' %}
+
+{% block content %}
+    <h1>Add Variety</h1>
+
+
+    <form action="{% url 'icecreamapp:variety_list' %}" method="post">
+      {% csrf_token %}
+      <fieldset>
+          <label for="variety_name">Name: </label>
+          <input id="variety_name" type="text" name="variety_name">
+      </fieldset>
+      <fieldset>
+          <label for="country_of_origin">Country of Origin: </label>
+          <input id="country_of_origin" type="text" name="country_of_origin">
+        </fieldset> 
+
+      <input type="submit" value="Add Variety" />
+    
+    </form>
+{% endblock content %}
